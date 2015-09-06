@@ -1,0 +1,17 @@
+<div class="nav">
+    <div class="navbar" id="nav">
+        <div class="background" id="navbg"></div>
+
+        <div class="content">
+            <div class="displayPicture"></div>
+            <div class="link">LINK 1</div>
+            <div class="link">LINK 2</div>
+            <div class="link">LINK 3</div>
+            {% for page in site.pages %}
+                {% if page.title %}
+                    <a class="link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

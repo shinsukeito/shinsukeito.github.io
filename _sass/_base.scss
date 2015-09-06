@@ -8,7 +8,22 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+html {
+    min-height: 100%;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+    background: #7fcab4;
+    background: -webkit-linear-gradient(#c5e6c6, #7fcab4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c5e6c6, #7fcab4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c5e6c6, #7fcab4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c5e6c6, #7fcab4); /* Standard syntax */
+
+    background-attachment: fixed;
+}
 
 /**
  * Basic styling
@@ -19,9 +34,9 @@ body {
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
-    background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
+
 
 
 
@@ -147,44 +162,6 @@ pre {
         padding-left: 0;
     }
 }
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
 
 /**
  * Icons
