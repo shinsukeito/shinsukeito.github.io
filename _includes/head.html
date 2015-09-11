@@ -13,8 +13,13 @@
 
 	<script>
 		$(window).scroll(function() {
-		    $("#nav").css("top", Math.max(0, 100 - $(this).scrollTop()));
-		    $("#navbg").css("top", Math.max(0, 100 - $(this).scrollTop()));
+			if ($(this).scrollTop() <= 100) {
+			    $("#nav").css("position", 'absolute');
+			    $("#nav").css("top", 100);
+			} else if ($(this).scrollTop() > 100) {
+			    $("#nav").css("position", 'fixed');
+			    $("#nav").css("top", 0);
+			}
 		});
 	</script>
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Lorem Ipsum"
-date:   2015-08-26 15:56:27
+title:  "Lorem Ipsum 3"
+date:   2015-08-03 15:56:27
 categories: lorem ipsum
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus luctus justo, ac lacinia justo sagittis ut. Ut eleifend nisi nec venenatis hendrerit. Suspendisse vestibulum dictum nunc, viverra ornare dolor scelerisque vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse id mauris ut tortor consequat ultricies. Sed sit amet dui quis ligula rutrum pellentesque. Praesent mollis elementum dolor, vel venenatis nisl finibus ac. Nam elementum blandit imperdiet.
-tags: [programming]
+tags: [visual art, music]
 ---
 [Lorem ipsum][lorem-ipsum] dolor sit amet, consectetur adipiscing elit. Nulla dapibus luctus justo, ac lacinia justo sagittis ut. Ut eleifend nisi nec venenatis hendrerit. Suspendisse vestibulum dictum nunc, viverra ornare dolor scelerisque vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse id mauris ut tortor consequat ultricies. Sed sit amet dui quis ligula rutrum pellentesque. Praesent mollis elementum dolor, vel venenatis nisl finibus ac. Nam elementum blandit imperdiet.
 

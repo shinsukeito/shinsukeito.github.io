@@ -1,8 +1,8 @@
 # Site settings
 title: shinsuke ito
-email: your-email@domain.com
+email: shinsukeito@live.com.au
 description: > # this means to ignore newlines until "baseurl:"
- &quotDo it now, then it's done.&quot
+ &quot;Do it now, then it's done.&quot;
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "shinsukei.to" # the base hostname & protocol for your site
 github_username: "shinsukeito"

@@ -1,17 +1,30 @@
-<div class="nav">
-    <div class="navbar" id="nav">
-        <div class="background" id="navbg"></div>
+<div class="nav" id="nav">
+    <div class="content">
+        <div class="displayPicture"></div>
 
-        <div class="content">
-            <div class="displayPicture"></div>
-            <div class="link">LINK 1</div>
-            <div class="link">LINK 2</div>
-            <div class="link">LINK 3</div>
-            {% for page in site.pages %}
-                {% if page.title %}
-                    <a class="link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                {% endif %}
-            {% endfor %}
+        <div class="link">
+            <a href="/">
+                <div class="link-wrapper">HOME</div>
+            </a>
+        </div>
+        
+        <div class="link">
+            <div class="bg"></div>
+            <a href="/about.html">
+                <div class="link-wrapper">ABOUT</div>
+            </a>
+        </div>
+        
+        <div class="link">
+            <a href="/programming-projects.html">
+                <div class="link-wrapper">PROGRAMMING</div>
+            </a>
+        </div>
+
+        <div class="link">
+            <a href="/visual-art-projects.html">
+                <div class="link-wrapper">VISUAL ART</div>
+            </a>
         </div>
     </div>
 </div>

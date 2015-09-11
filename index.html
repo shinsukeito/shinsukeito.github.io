@@ -1,18 +1,32 @@
 ---
 layout: default
+permalink: /
 ---
 
-<div class="home">
-
-  <h1>Welcome</h1>
-
-  <ul style="list-style-type: none; padding: 0px; margin: 0px;" class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<h1>Latest Posts</h1>
+<ul style="list-style-type: none; padding-left: 0px; margin: 0px;" class="post-list">
+  {% for post in site.posts %}
+    <li>
+    	<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+	    	<div class="post-container">
+				<p class="post-title">
+					{{ post.title }}
+				</p>
+				<p class="post-desc">
+					{{ post.description }}
+				</p>
+				<p class="post-tags">
+					{% for tag in post.tags %}
+						{% if forloop.index < forloop.length %}
+							{{ tag }}, 
+						{% else %}
+							{{ tag }}
+						{% endif %}
+					{% endfor %}
+				</p>
+			</div>
+		</a>
+    </li>
+    <br>
+  {% endfor %}
+</ul>

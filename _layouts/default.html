@@ -2,20 +2,25 @@
 <html>
 
   {% include head.html %}
+  
+  <div class="site-bg"></div>
+  <div class="gradient">
+      <div class="inner"></div>
+  </div>
 
   <body>
-    <div class="bg">
-      <div class="gradient">
-        <div class="inner"></div>
-      </div>
+    <div class="bg"></div>
 
-      {% include header.html %}
-      {% include navigation.html %}
-      {% include footer.html %}
+    
 
-      <div class="main">
-        {{ content }}
-      </div>
+    {% include header.html %}
+
+    <div class="main">
+      <div class="navbg"></div> <!-- placed here beacuse we need height of main -->
+      {{ content }}
     </div>
+    
+    {% include navigation.html %}
+    {% include footer.html %}
   </body>
 </html>

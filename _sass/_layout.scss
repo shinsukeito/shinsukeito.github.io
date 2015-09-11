@@ -1,8 +1,24 @@
-.main {
-    $pad: 20px;
+.site-bg {
+    position: fixed;
+    z-index: -1;
 
+    width: 100%;
+    height: 100%;
+
+    background-image: url("/bg.png");
+    background-size: cover;
+
+    opacity: 0.2;
+    filter: alpha(opacity = 20); /* For IE8 and earlier */
+}
+
+/*
+ * Main
+ */
+
+.main {
     position: absolute;
-    padding: $pad;
+    padding: 20px;
     margin-left: 350px;
 
     width: -webkit-calc(100% - 350px - 40px);
@@ -12,8 +28,8 @@
     min-height:         calc(100% - 140px);
 
     background: #FFF;
-    opacity: 0.8;
-    filter: alpha(opacity = 80); 
+    opacity: 0.9;
+    filter: alpha(opacity = 90); 
 }
 
 /*
@@ -39,59 +55,57 @@
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
+
+    transition-duration: 0.2s;
 }
 
 .siteTitle:visited {
     color: #FFF;
 }
 
+.siteTitle:hover {
+    color: #FFF;
+    opacity: 1;
+    filter: alpha(opacity = 100); /* For IE8 and earlier */
+
+    transition-duration: 0s;
+}
+
 /*
 * Nav bar
 */
-.nav { /* Wrapper for overflows */
+.nav { 
     position: fixed;
-    z-index: -5;
-    top: 0px;
-
-    width: 350px;
-    height: 100%;
-
-    overflow: hidden;
-}
-
-.navbar {
-    position: absolute;
-    z-index: 1;
-
     top: 100px;
+    bottom: 0px;
 
     width: 350px;
-    height: 100%;
-
-    .background {
-        position: fixed;
-        z-index: -5;
-
-        width: 350px;
-        height: 100%;
-
-        background: #fff;
-        opacity: 0.5;
-        filter: alpha(opacity = 50); /* For IE8 and earlier */
-    }
+    height: auto;
 
     .displayPicture {
         margin: 50px auto 30px auto;
 
+        background-image: url("/display.jpg");
+
+        background-size: 150px 150px;
         width: 150px;
         height: 150px;
-
-        background: #fff;
 
         -moz-border-radius: 75px;
         -webkit-border-radius: 75px;
         -ms-border-radius: 75px;
         border-radius: 75px;
+        transition-duration: 0.2s;
+
+        &:hover {
+            background-image: url("/display.jpg");
+
+            -moz-border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -ms-border-radius: 25px;
+            border-radius: 25px;
+            transition-duration: 0.1s;
+        }
     }
 
     .link {
@@ -102,20 +116,72 @@
         line-height: 35px;
 
         padding-right: 5px;
-        text-align: right;
 
         background: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity = 70); /* For IE8 and earlier */
+
+        transition-duration: 0.2s;
     }
+
+    .link:hover {
+        opacity: 1;
+        filter: alpha(opacity = 100); /* For IE8 and earlier */
+
+        transition-duration: 0s;
+    }
+
+    .link-wrapper {
+        padding-right: 5px;
+        margin-right: -5px;
+
+        text-align: right;
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.navbg {
+    position: absolute;
+    top: 0px;
+    left: -350px;
+    z-index: -5;
+
+    width: 350px;
+    height: 100%;
+
+    background: #fff;
+
+    opacity: 0.5;
+    filter: alpha(opacity = 50); /* For IE8 and earlier */
 }
 
 /*
 * Footer
 */
-.siteFooter {
+.site-footer {
     position: fixed;
-    bottom: 0px;
+    bottom: -120px;
+    left: 0px;
 
     padding: 20px;
+    width: 310px;
+    height: auto;
+
+    text-align: right;
+    background: #fff;
+
+    opacity: 0.4;
+    filter: alpha(opacity = 40); /* For IE8 and earlier */
+
+    transition-duration: 0.3s;
+
+    &:hover {
+        bottom: 0px;
+        opacity: 0.8;
+        filter: alpha(opacity = 80); /* For IE8 and earlier */
+        transition-duration: 0.4s;
+    }
 }
 
 /*
@@ -136,8 +202,8 @@
         width:         calc(100% + 350px);
         height: 100%;
 
-        opacity: 0.05;
-        filter: alpha(opacity = 5); /* For IE8 and earlier */
+        opacity: 0.07;
+        filter: alpha(opacity = 7); /* For IE8 and earlier */
 
         background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, top top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -149,5 +215,49 @@
         -ms-transform: rotate(-60deg); /* IE 9 */
         -webkit-transform: rotate(-60deg); /* Safari */
         transform: rotate(-60deg);
+    }
+}
+
+
+/*
+ * Index Posts
+ */
+
+.post-link {
+    text-decoration: none;
+
+    &:visited, &:link, &:hover, &:active {
+        color: #000;
+    }
+}
+
+.post-title {
+    font-size: 24px;
+}
+
+.post-desc {
+}
+
+.post-tags {
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+.post-container {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+
+    width: auto;
+    height: auto;
+
+    background: #ded;
+    transition-duration: 0.2s;
+
+    &:hover {
+        background: #efe;
+        transition-duration: 0s;
     }
 }

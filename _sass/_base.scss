@@ -1,3 +1,13 @@
+/*
+ * Font declarations
+ */
+
+@font-face { 
+    font-family: "robotolight"; 
+    src: url('/fonts/Roboto-Light.ttf'); 
+}
+
+
 /**
  * Reset some basic elements
  */
@@ -16,7 +26,7 @@ html {
     -o-background-size: cover;
     background-size: cover;
 
-    background: #7fcab4;
+    background: #c5e6c6;
     background: -webkit-linear-gradient(#c5e6c6, #7fcab4); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#c5e6c6, #7fcab4); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#c5e6c6, #7fcab4); /* For Firefox 3.6 to 15 */
@@ -29,7 +39,7 @@ html {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
+    font-family: "robotolight";
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
@@ -95,7 +105,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    letter-spacing: 0.1em;
 }
 
 
@@ -113,7 +123,7 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
