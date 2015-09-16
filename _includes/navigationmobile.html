@@ -1,7 +1,6 @@
-<div class="nav" id="nav">
-    <div class="content">
-        <div class="displayPicture"></div>
+<div class="navmob" id="navmob">
 
+    <div class="content" id="navmobcontent">
         <div class="link">
             <a href="/">
                 <div class="link-wrapper">HOME</div>
@@ -28,16 +27,13 @@
         </div>
     </div>
 
+    <button id="toggle"></button>
+
     <script>
-        /* desktop nav controls */
-        $(window).scroll(function() {
-            if ($(this).scrollTop() <= 100) {
-                $("#nav").css("position", 'absolute');
-                $("#nav").css("top", 100);
-            } else if ($(this).scrollTop() > 100) {
-                $("#nav").css("position", 'fixed');
-                $("#nav").css("top", 0);
-            }
+        /* mobile nav controls */
+        $("#toggle").click(function() {
+            $(this).toggleClass("down");
+            $("#navmobcontent").slideToggle();
         });
     </script>
 </div>

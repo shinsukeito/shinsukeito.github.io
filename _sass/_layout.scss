@@ -56,7 +56,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
 
-    transition-duration: 0.2s;
+    transition-duration: 0.4s;
 }
 
 .siteTitle:visited {
@@ -100,10 +100,10 @@
         &:hover {
             background-image: url("/display.jpg");
 
-            -moz-border-radius: 25px;
-            -webkit-border-radius: 25px;
-            -ms-border-radius: 25px;
-            border-radius: 25px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
             transition-duration: 0.1s;
         }
     }
@@ -157,12 +157,97 @@
 }
 
 /*
+ * Mobile nav menu
+ */
+
+.navmob {
+    position: fixed;
+    margin-top: -10px;
+    z-index: 8;
+
+    opacity: 0;
+    filter: alpha(opacity = 0); /* For IE8 and earlier */
+    width: 100%;
+    height: auto;
+
+    transition-duration: 0.2s;
+
+    button {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+
+        height: 32px;
+        width: 32px;
+
+        background: rgba(0,0,0,0.5) url("/menuarrow.png") center no-repeat;
+        background-size: 80%;
+
+        border: 0;
+        outline: none;
+        transition-duration: 0.4s;
+
+        &.down {
+            -ms-transform: rotate(-180deg); /* IE 9 */
+            -webkit-transform: rotate(-180deg); /* Safari */
+            transform: rotate(-180deg);
+            background-color: transparent;
+            border: 0;
+        }
+
+        cursor: pointer;
+    }
+
+    .content {
+        display: none;
+        background:#000;
+        padding-top: 22px;
+        padding-bottom: 16px;
+        opacity: 0.9;
+        filter: alpha(opacity = 90); /* For IE8 and earlier */
+    }
+
+    .link {
+        margin: 10px auto;
+
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+
+        padding-right: 5px;
+
+        background: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity = 70); /* For IE8 and earlier */
+
+        transition-duration: 0.2s;
+    }
+
+    .link:hover {
+        opacity: 1;
+        filter: alpha(opacity = 100); /* For IE8 and earlier */
+
+        transition-duration: 0s;
+    }
+
+    .link-wrapper {
+        padding-right: 5px;
+        margin-right: -5px;
+
+        text-align: right;
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+/*
 * Footer
 */
 .site-footer {
     position: fixed;
     bottom: -120px;
     left: 0px;
+    z-index: 5;
 
     padding: 20px;
     width: 310px;
@@ -235,9 +320,6 @@
     font-size: 24px;
 }
 
-.post-desc {
-}
-
 .post-tags {
     text-align: right;
     font-size: 12px;
@@ -260,4 +342,62 @@
         background: #efe;
         transition-duration: 0s;
     }
+}
+
+/*
+ * MOBILE OPTIMIZATION
+ */
+
+@media (max-width: 800px) {
+    .site-bg {
+        position: fixed;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.2;
+        filter: alpha(opacity = 20); /* For IE8 and earlier */
+    }
+
+    .siteTitle {
+        top: 48px;
+        left: 20px;
+
+        font-size: 48px;
+    }
+
+    .nav { 
+        display:none;
+    }
+
+    .navbg {
+        display:none;
+    }
+
+    .navmob {
+        opacity: 1;
+        filter: alpha(opacity = 100); /* For IE8 and earlier */
+        top: 0px;
+
+    }
+
+    .site-footer {
+        display: none;
+    }
+
+    /*
+     * Main
+     */
+
+    .main {
+        position: absolute;
+        padding: 20px;
+        margin-left: 0px;
+
+        width: -webkit-calc(100% - 40px);
+        width:         calc(100% - 40px);
+        height: auto;
+    }
+
 }
