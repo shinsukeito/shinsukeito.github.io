@@ -1,32 +1,22 @@
----
-layout: default
-permalink: /
----
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #cff2c4;
+			}
 
-<h1>Latest Posts</h1>
-<ul style="list-style-type: none; padding-left: 0px; margin: 0px;" class="post-list">
-  {% for post in site.posts %}
-    <li>
-    	<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-	    	<div class="post-container">
-				<p class="post-title">
-					{{ post.title }}
-				</p>
-				<p class="post-desc">
-					{{ post.description }}
-				</p>
-				<p class="post-tags">
-					{% for tag in post.tags %}
-						{% if forloop.index < forloop.length %}
-							{{ tag }}, 
-						{% else %}
-							{{ tag }}
-						{% endif %}
-					{% endfor %}
-				</p>
-			</div>
-		</a>
-    </li>
-    <br>
-  {% endfor %}
-</ul>
+			img {
+				padding-top: 50px;
+			    display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class=image>
+			<img src="shinsukei_to.png">
+		</div>
+	</body>
+</html>
